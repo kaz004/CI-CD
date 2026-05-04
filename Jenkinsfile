@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         APP_NAME = 'ci-cd-jenkins-demo'
-        DOCKERHUB_REPO = 'kaz004/ci-cd-jenkins-demo'
+        DOCKERHUB_REPO = 'kazz004/ci-cd-jenkins-demo'
         IMAGE_TAG = "${env.BUILD_NUMBER}"
     }
 

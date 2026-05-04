@@ -44,5 +44,5 @@ Before running the Jenkins job:
 The Docker image name used by the pipeline is:
 
 ```text
-kaz004/ci-cd-jenkins-demo
+kazz004/ci-cd-jenkins-demo
 ```
