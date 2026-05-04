@@ -1,0 +1,17 @@
+{
+  "name": "ci-cd-jenkins-demo",
+  "version": "1.0.0",
+  "description": "Small Node.js app for a Jenkins, GitHub, and Docker Hub CI/CD pipeline.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/app.test.js"
+  },
+  "keywords": [
+    "jenkins",
+    "docker",
+    "ci-cd"
+  ],
+  "author": "Kavya",
+  "license": "MIT"
+}
