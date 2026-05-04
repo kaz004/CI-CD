@@ -36,13 +36,13 @@ The pipeline has these stages:
 1. Fetch from GitHub
 2. Build Application
 3. Create Docker Image
-4. Push Image to Docker Hub
+4. Login to Docker Hub
+5. Push Image to Docker Hub
 
 ## Docker Hub Secrets
 
-Before running the workflow, add these repository secrets in GitHub:
+Before running the workflow, add this repository secret in GitHub:
 
-- `DOCKERHUB_USERNAME`: your Docker Hub username
 - `DOCKERHUB_TOKEN`: your Docker Hub access token
 
 The Docker image name used by the pipeline is:
