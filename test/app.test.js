@@ -23,7 +23,7 @@ async function testRootRoute() {
     const body = await response.json();
 
     assert.equal(response.status, 200);
-    assert.equal(body.service, "ci-cd-jenkins-demo");
+    assert.equal(body.service, "ci-cd-github-actions-demo");
   } finally {
     await server.close();
   }

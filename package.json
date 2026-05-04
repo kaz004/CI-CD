@@ -1,14 +1,14 @@
 {
-  "name": "ci-cd-jenkins-demo",
+  "name": "ci-cd-github-actions-demo",
   "version": "1.0.0",
-  "description": "Small Node.js app for a Jenkins, GitHub, and Docker Hub CI/CD pipeline.",
+  "description": "Small Node.js app for a GitHub Actions and Docker Hub CI/CD pipeline.",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "node test/app.test.js"
   },
   "keywords": [
-    "jenkins",
+    "github-actions",
     "docker",
     "ci-cd"
   ],

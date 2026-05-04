@@ -6,5 +6,5 @@ const host = process.env.HOST || "0.0.0.0";
 const server = createApp();
 
 server.listen(port, host, () => {
-  console.log(`ci-cd-jenkins-demo listening on http://${host}:${port}`);
+  console.log(`ci-cd-github-actions-demo listening on http://${host}:${port}`);
 });

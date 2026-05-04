@@ -14,8 +14,8 @@ function createApp() {
   return createServer((req, res) => {
     if (req.method === "GET" && req.url === "/") {
       sendJson(res, 200, {
-        message: "Hello from the Jenkins CI/CD demo app",
-        service: "ci-cd-jenkins-demo"
+        message: "Hello from the GitHub Actions CI/CD demo app",
+        service: "ci-cd-github-actions-demo"
       });
       return;
     }

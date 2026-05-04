@@ -1,6 +1,6 @@
-# CI/CD Jenkins Demo
+# CI/CD GitHub Actions Demo
 
-This is a small Node.js HTTP application created for a Jenkins pipeline demo.
+This is a small Node.js HTTP application created for a GitHub Actions CI/CD pipeline demo.
 
 ## Local Run
 
@@ -17,32 +17,46 @@ Open:
 ## Docker Run
 
 ```bash
-docker build -t ci-cd-jenkins-demo .
-docker run --rm -p 3000:3000 ci-cd-jenkins-demo
+docker build -t ci-cd-github-actions-demo .
+docker run --rm -p 3000:3000 ci-cd-github-actions-demo
 ```
 
-## Jenkins Pipeline
+## GitHub Actions Pipeline
 
-The `Jenkinsfile` has these stages:
+The workflow file is located at:
+
+```text
+.github/workflows/ci-cd.yml
+```
+
+It runs automatically when code is pushed to the `main` branch. It can also be started manually from the GitHub Actions tab.
+
+The pipeline has these stages:
 
 1. Fetch from GitHub
 2. Build Application
 3. Create Docker Image
 4. Push Image to Docker Hub
 
-Before running the Jenkins job:
+## Docker Hub Secrets
 
-- Install Docker on the Jenkins agent.
-- Create a Jenkins pipeline job that uses this repository.
-- Create a Jenkins credential:
+Before running the workflow, add these repository secrets in GitHub:
 
-- Kind: `Username with password`
-- ID: `dockerhub-credentials`
-- Username: your Docker Hub username
-- Password: Docker Hub access token
+- `DOCKERHUB_USERNAME`: your Docker Hub username
+- `DOCKERHUB_TOKEN`: your Docker Hub access token
 
 The Docker image name used by the pipeline is:
 
 ```text
-kazz004/ci-cd-jenkins-demo
+kazz004/ci-cd-github-actions-demo
 ```
+
+## GitHub Secrets Setup
+
+Open the repository on GitHub and go to:
+
+```text
+Settings -> Secrets and variables -> Actions -> New repository secret
+```
+
+Add both Docker Hub secrets there. After that, every push to `main` will test the app, build the Docker image, and push it to Docker Hub.
